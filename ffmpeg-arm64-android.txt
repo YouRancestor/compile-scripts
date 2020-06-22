@@ -1,10 +1,10 @@
-../configure
---sysroot=/path/to/android_ndk/platforms/android-27/arch-arm64
---cc=clang --cxx=clang++ --enable-cross-compile --target-os=linux --arch=aarch64
---disable-programs --disable-doc --disable-asm --disable-symver --enable-pic
---prefix=./install --extra-cflags=--target=aarch64-linux-android27
--isystem/path/to/android_ndk/sysroot/usr/include
--isystem/path/to/android_ndk/sysroot/usr/include/aarch64-linux-android
---extra-ldflags=--target=aarch64-linux-android27  --disable-everything
---enable-decoder=h264 --enable-parser=h264 --enable-demuxer=h264
+../configure \
+--sysroot=/path/to/android_ndk/platforms/android-27/arch-arm64 \
+--cc=clang --cxx=clang++ --enable-cross-compile --target-os=linux --arch=aarch64 \
+--disable-programs --disable-doc --disable-asm --disable-symver --enable-pic \
+--prefix=./install --extra-cflags=--target=aarch64-linux-android27 \
+-isystem/path/to/android_ndk/sysroot/usr/include \
+-isystem/path/to/android_ndk/sysroot/usr/include/aarch64-linux-android \
+--extra-ldflags=--target=aarch64-linux-android27  --disable-everything \
+--enable-decoder=h264 --enable-parser=h264 --enable-demuxer=h264 \
 --enable-protocol=file
